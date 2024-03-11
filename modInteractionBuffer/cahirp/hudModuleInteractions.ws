@@ -5,8 +5,8 @@
 )
 
 @insert(
-  note("")
-  at(event OnInteractionsUpdated)
+  note("add hook on OnInteractionsUpdated")
+  at(OnInteractionsUpdated)
   at(m_fxSetInteractionHoldDuration.InvokeSelfOneArg)
 )
 // BEGIN
