@@ -7,7 +7,11 @@ function IB_onInteractionDisplayed(component: CInteractionComponent): bool {
   var newnpc: CNewNPC;
   var herb: W3Herb;
 
-  if (theInput.IsActionPressed('Interact') || theInput.IsActionPressed('InteractHold')) {
+  if (
+    theInput.IsActionPressed('Interact')
+    || theInput.IsActionPressed('InteractHold')
+    || theInput.IsActionPressed('AutoTakeAll_BeginLootingSweep')
+  ) {
     action_name = component.GetInputActionName();
 
     herb = (W3Herb)component.GetEntity();
